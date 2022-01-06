@@ -1,4 +1,10 @@
-# first-step-to-SQL
-<SQL 첫걸음> 예제 실습 기록
-- 한빛 미디어, 아사이 아츠시 지음
-- 기간 : 2021.12.28 ~ 2021.01.20
+# SQL Study 📁
+### 1. 학습 기간
+  `2022.01.03` ~ `진행중`
+
+### 2. 학습 방향
+1️⃣ 이수안컴퓨터연구소 Youtube - MySQL tutorial
+
+2️⃣ Mode SQL tutorial
+
+3️⃣ SQL 문제 풀이
