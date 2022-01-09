@@ -7,8 +7,8 @@ Mode의 DB에 있는 튜토리얼 데이터를 활용했습니다. (tutorial.bil
 ## SQL Logical Operators - NOT [🔗](https://mode.com/sql-tutorial/sql-not-operator/)
 
 ### 주의점 
-- Using NOT with < and > usually doesn't make sense.
-- For example, this query will return an error.
+- `NOT`은 `<`, `>`와 함께 쓰일 수 없다. 같이 쓰이면 에러가 발생한다.
+- EX)
   ```sql
   /*에러 발생 쿼리*/
   SELECT * 
