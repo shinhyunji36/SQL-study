@@ -251,7 +251,7 @@ ORDER BY total_player DESC
 
 
 ### 문제
->ㅇ
+> Write a query that shows the number of players at schools with names that start with A through M, <br> and the number at schools with names starting with N - Z.
 
 
 ### 오답
