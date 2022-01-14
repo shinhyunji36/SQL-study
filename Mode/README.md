@@ -24,6 +24,26 @@
     ``` 
   **3. Intermediate SQL**
     ```
+    - Aggregate Functions
+    - COUNT
+    - SUM
+    - MIN/MAX
+    - AVG
+    - GROUP BY
+    - HAVING
+    - CASE
+    - DISTINCT
+    - Joins
+    - INNER JOIN
+    - OUTER JOIN
+    - LEFT JOIN
+    - RIGHT JOIN
+    - Joins Using WHERE or ON
+    - FULL OUTER JOIN
+    - UNION
+    - Joins with Comparison Operators
+    - Joins on Multiple Keys
+    - Self Joins
     ```
   **4. Advanced SQL**
     ```
