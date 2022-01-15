@@ -26,8 +26,7 @@ FROM tutorial.crunchbase_acquisitions acquisitions
 JOIN tutorial.crunchbase_companies companies
 ON acquisitions.company_permalink = companies.permalink
 ```
-![image](https://user-i
-mages.githubusercontent.com/74661937/149626175-b6386d27-6a54-40e6-afc7-ba2970b78889.png)
+![image](https://user-images.githubusercontent.com/74661937/149626175-b6386d27-6a54-40e6-afc7-ba2970b78889.png)
 
 - `COUNT`는 기본적으로 `non-null` rows만 카운트 한다.
 
