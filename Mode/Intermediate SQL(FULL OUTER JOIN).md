@@ -5,7 +5,9 @@ Mode의 DB에 있는 튜토리얼 데이터를 활용했습니다. (Crunchbase d
 ```
 ## FULL OUTER JOIN [🔗](https://mode.com/sql-tutorial/sql-full-outer-join/)
 - MySQL에서는 `FULL OUTER JOIN`구문을 사용할 수 없다. 
-  - 대신, `FULL OUTER JOIN`이 `LEFT JOIN`과 `RIGHT JOIN`을 모두 한 것이라는 점을 이용해 `UNION`을 활용하여 같은 결과를 낼 수 있다.
+  - 대신, 
+    `FULL OUTER JOIN`이 `LEFT JOIN`과 `RIGHT JOIN` 결과의 합집합이라는 점을 이용하여 같은 결과를 낼 수 있다. (`UNION` 활용)
+
 > EXAMPLE
 ```SQL
 SELECT COUNT(CASE WHEN companies.permalink IS NOT NULL AND acquisitions.company_permalink IS NULL
