@@ -73,9 +73,22 @@ ON companies.permalink = investments.company_permalink
   
   UNION
   
-  (SELECT * FROM topic RIGHT JOIN author ON topic.author_id = author.id)
+  (SELECT * FROM topic RIGHT JOIN author ON topic.author_id = author.aid)
   ```
   
+- 중간 과정 (선 `LEFT JOIN` 후 `RIGHT JOIN`)
+  |tid|title|author_id|aid|name|city|
+  |---|---|---|---|---|---|
+  |1|HTML|1|1|Kim|seoul|
+  |2|CSS|2|2|Jung|jeju|
+  |3|Database|1|1|Kim|seoul|
+  |4|Oracle|**NULL**|**NULL**|**NULL**|**NULL**|
+  |1|HTML|1|1|Kim|seoul|
+  |3|Database|1|1|Kim|seoul|
+  |2|CSS|2|2|Jung|jeju|
+  |**NULL**|**NULL**|**NULL**|3|Lee|namhae|
+  - 여기에서 중복되는 것을 지우면, 결과가 나온다!  <br>(`UNION`의 기본이 **distinct** 이기 때문!)
+
 - 결과
   |tid|title|author_id|aid|name|city|
   |---|---|---|---|---|---|
