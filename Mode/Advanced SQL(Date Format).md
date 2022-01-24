@@ -1,7 +1,7 @@
 # Mode - SQL Advanced
 ```
 Mode의 자체 SQL을 활용하여 실습했습니다.
-Mode의 DB에 있는 튜토리얼 데이터를 활용했습니다. (tutorial.crunchbase_companies_clean_date)
+Mode의 DB에 있는 튜토리얼 데이터를 활용했습니다. (tutorial.crunchbase_companies_clean_date, tutorial.crunchbase_acquisitions_clean_date)
 ```
 ## Date Format [🔗](https://mode.com/sql-tutorial/sql-datetime-format/)
 - `INTERVAL` : 시간 간격 도입시 사용
