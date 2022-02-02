@@ -14,7 +14,7 @@ SELECT DISTINCT CITY
 FROM STATION
 WHERE LEFT(CITY, 1) IN ('A','E','I','O','U');
 ```
- - 그러나 이 경우는 `CITY` 컬럼의 모든 데이터가 대문자로 시작한다는 전제 하에 가능함. 
+ - 그러나 이 경우는 `CITY` 컬럼의 모든 데이터가 대문자로 시작한다는 전제 하에 가능함.<br>(그러나 HackerRank에서는 대문자든 소문자든 동일하게 작동했다)
  - 그래서 다른 사람들의 답을 찾아봤음. 
    1. `regexp`를 사용한 정규표현식 사용
    2. `LIKE`를 사용
