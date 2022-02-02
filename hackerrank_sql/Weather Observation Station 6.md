@@ -10,7 +10,7 @@ The STATION table is described as follows:
 
 ### 나의 답
 ```sql
-SELECT CITY
+SELECT DISTINCT CITY
 FROM STATION
 WHERE LEFT(CITY, 1) IN ('A','E','I','O','U');
 ```
