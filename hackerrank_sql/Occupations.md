@@ -70,17 +70,20 @@ The empty cell data for columns with less than the maximum number of names per o
   
   2. `SELECT MAX(CASE WHEN(Occupation = 'Doctor') THEN Name END) AS Doctor` 의 경우
       1. `GROUP BY rn`을 통해 같은 row_number를 기준으로 그룹화 한 후,<br> 
-        (ex. Doctor 1, Actor 1 / Doctor 2, Actor 2,..)<br>
-        (**rn(row_number) = 1인 경우**)
+        (ex. Doctor 1, Actor 1 / Doctor 2, Actor 2,.. → **rn(row_number) = 1인 경우, Aamina Doctor 1, Eve Actor 1, ...**)<br>
+     
+          - 각 행에 각 직업(Occupation)별로 이름이 가장 첫번째로 오는 사람(첫 행) → 두번째로 오는 사람(두번째 행) → ...순으로 데이터를 출력해야 함.
+          - 이를 위해 먼저 각 직업 별로 이름이 가장 첫번째 순서인 이름들(row_num = 1; name Docotr 1, name Actor 1, ..), 두번째 순서의 이름들(row_num = 2; name Doctor 2, name Actor2 ..), ...끼리 `GROUP BY`를 실행
 
-      2. `CASE WHEN (Occupation = 'Doctor') THEN Name END` <br>
-        : `Occupation` 컬럼의 값이 Doctor일 때, `Name`의 값을 출력한다.<br>
-        (**Aamina Doctor 1, Julia Doctor 2, Priya Doctor 3 → Aamina, Julia, Priya**) 
+      2. `CASE WHEN (Occupation = 'Doctor') THEN Name END`
+          - `Occupation` 컬럼의 값이 Doctor일 때, `Name`의 값을 출력한다. (**Aamina Doctor 1, Eve Actor 1, ... → Aamina**)
 
 
-      3. `MAX`(집계함수) <br>
-        : 가장 상위 데이터인 **Aamina Doctor 1**의 `Name`인 **Aamina**를 출력한다.<br>
-          (`GROUP BY`를 사용하면 결과 출력을 위해 집계 함수를 함께 사용 해야한다.)
+      3. `MAX`(집계함수)
+          - 가장 상위 데이터인 **Aamina Doctor 1**의 `Name`인 **Aamina**를 출력한다.
+          - 어차피 `row_num = 1`로 그룹화된 데이터 중 `Occupation = Doctor`인 것은 `Aamina Doctor 1`밖에 없었지만,<br>
+            `GROUP BY` 사용을 위해 집계함수 `MAX` 사용했음. 조건을 충족하는 레코드가 하나뿐이기 때문에 집계함수 `MIN`을 사용해도 같은 결과를 출력한다.<br>
+            (*`GROUP BY`를 사용하면 결과 출력을 위해 집계 함수를 함께 사용 해야한다.)
   
   - 전체 쿼리 실행 결과
   
