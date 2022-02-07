@@ -58,7 +58,7 @@ The empty cell data for columns with less than the maximum number of names per o
   - `row_number()` <br>
     : DB내 row의 수를 세기 위한 함수<br>
      ex. `SELECT row_number() over (order by column_name) AS rn` <br>
-      : A 컬럼을 기준으로 오름차순 정렬된 rows에 순서대로 행 번호를 붙인다. (즉, 행 번호가 기입된 컬럼을 만든다.)
+      : 특정 컬럼을 기준으로 오름차순 정렬된 rows에 순서대로 행 번호를 붙인다. (즉, 행 번호가 기입된 컬럼을 만든다.)
     
   - `row_num() over (partition by column_name ~)` <br>
     : 기준 컬럼에서 동일한 값을 가진 행끼리 파티션을 나눠 구성하고, 파티션 마다 행 번호를 부여한다. <br>
