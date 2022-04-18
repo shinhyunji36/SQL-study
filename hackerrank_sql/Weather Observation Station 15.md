@@ -6,11 +6,9 @@
    
 ### 나의 풀이
 - 컨셉
-  - `0이 눌리지 않는다` : `REPLACE`로 0을 ''로 대체하기
-  - `round it up to the next integer` : `ROUND` 대신 `CEIL` 사용하기 (cf. `FLOOR`)
   - MAX값을 활용할 때
-    - CASE 1) 정렬로 줄 세워놓고 LIMIT 1
-    - CASE 2) WHERE 문에 SUBQUERY 사용
+    - CASE 1) 정렬로 줄 세워놓고 LIMIT 1 
+    - CASE 2) WHERE 문에 SUBQUERY 사용 ✔
 
 - 코드 
   ```python
